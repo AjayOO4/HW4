@@ -40,11 +40,22 @@ public class CSVReader{
 
 	private static Detail createCar(String[] data) {
 		 String manufacturer = data[0];
-	     int price = Integer.parseInt(data[1]);
-	     String model = data[2];
+		 String model = data[1];
+	     int price = Integer.parseInt(data[2]);
+		 int milage = Integer.parseInt(data[3]);
+		 int owners = Integer.parseInt(data[4]);
+		 String color = data[5];
+		 String title = data[6];
+		 float mpg = Float.parseFloat(data[7]);
+		 int hp = Integer.parseInt(data[8]);
+		 int dayslisted = Integer.parseInt(data[9]);
+		 int sold = Integer.parseInt(data[10]);
+
+
+
 
 	     // create and return book of this metadata
-	     return new Detail(manufacturer, price, model);
+	     return new Detail(manufacturer, model, price, milage, owners, color, title, mpg, hp, dayslisted, sold);
 	}
 	
 	public void writeCSV(String[] userData) throws Exception {

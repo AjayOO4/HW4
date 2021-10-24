@@ -1,7 +1,31 @@
-Audi,38000,A6
-Audi,35900,Q3
-Volkswagen,29545,Golf GTI
-Honda,20000,Civic
-Audi,80000,R8
-BMW,50000,X3,
-BMW,30000,328i,
+Mazda,RX4,23377,74707,2,Black,Clean,21,110,5,1
+Mazda,RX4 Wag,24052,70007,2,Red,Salvage,21,110,7,0
+Datsun,710,24446,56697,2,Blue,Clean,22.8,93,9,0
+Hornet,4 Drive,24928,74217,3,Grey,Clean,21.4,110,11,0
+Hornet,Sportabout,18572,38836,3,Black,Clean,18.7,175,8,0
+Duster,360,23052,62083,1,Black,Clean,14.3,245,15,1
+Mercedes,240D,39972,27729,2,White,Clean,24.4,62,15,0
+Mercedes,230,38972,36244,1,Red,Clean,22.8,95,6,0
+Mercedes,280,30651,40084,1,Red,Clean,19.2,123,10,1
+Mercedes,280C,31570,50797,2,White,Clean,17.8,123,12,0
+Mercedes,450SE,36635,52459,2,Blue,Clean,16.4,180,7,0
+Mercedes,450SL,34953,57212,3,Black,Clean,17.3,180,4,1
+Mercedes,450SLC,30195,65378,3,White,Salvage,15.2,180,5,0
+Cadillac,Fleetwood,32176,40591,3,Blue,Clean,10.4,205,7,0
+Lincoln,Continental,30859,60642,2,Grey,Clean,10.4,215,5,1
+Chrysler,Imperial,16420,31457,3,Silver,Clean,14.7,230,15,0
+Fiat,128,15981,46954,3,Silver,Clean,32.4,66,5,0
+Honda,Civic,21513,60023,1,Black,Clean,30.4,52,8,0
+Toyota,Corolla,21638,74036,3,Red,Clean,33.9,65,15,1
+Toyota,Corona,16704,51502,1,White,Salvage,21.5,97,12,0
+Dodge,Challenger,23680,31007,3,Black,Clean,15.5,150,3,1
+AMC,Javelin,20775,27457,2,White,Clean,15.2,150,9,0
+Camaro,Z28,24863,27310,2,Brown,Clean,13.3,245,15,0
+Pontiac,Firebird,36678,46462,3,Black,Clean,19.2,175,11,0
+Fiat,X1-9,21338,60399,1,Brown,Salvage,27.3,66,12,0
+Porsche,914-2,58945,28875,3,Black,Clean,26,91,10,1
+Lotus,Europa,51579,47844,1,Blue,Clean,30.4,113,4,0
+Ford,Pantera L,17224,33886,3,Blue,Clean,15.8,264,9,0
+Ferrari,Dino,62347,32409,1,Red,Clean,19.7,175,14,1
+Maserati,Bora,59115,52305,1,White,Clean,15,335,8,0
+Volvo,142E,21259,69971,3,Blue,Clean,21.4,109,15,0
