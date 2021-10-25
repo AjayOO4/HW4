@@ -8,12 +8,11 @@ public class HW4_Practice {
 	public static void main(String[] args) throws Exception {
 		CSVReader reader = new CSVReader();
 		
-		System.out.println("engwkgh");
 //		String path = "/Practise Programs/src/com/practise/cars_data.csv";
 		List<Detail> cars = reader.readfromFile();
 		
 		System.out.println("Choose Options: ");
-		System.out.println("1. Display all Cars\n2. Search for a Particular Manufacturer Cars\n3. Search for a particular model \n4. Search for particular color \n5. Add a new Car");
+		System.out.println("1. Display all Cars\n2. Search for a Particular Manufacturer Cars\n3. Search for a particular model \n4. Search for particular color \n5. Add a new Car \n6. Search by mileage range for the Car \n7. Get details by Highest and lowest price \n8. Get cars availablity (not sold)");
 		
 		Scanner sc = new Scanner(System.in);
 		int option = sc.nextInt();
@@ -61,7 +60,55 @@ public class HW4_Practice {
 					
 					break;
 					
-			default:	System.out.println("EXIT");
+					//Search between mileage range
+			case 6: System.out.println("Enter the starting range for the mileage :");
+					boolean carFound = false;
+					int startingRange = sc.nextInt();
+					System.out.println("Enter the ending range for the mileage :");
+					int endingRange = sc.nextInt();
+					if(endingRange < startingRange) {
+						System.out.println("Invalid input range.");
+						break;
+					}
+					for(Detail d : cars) {
+						if((startingRange <= d.getMilage()) && (d.getMilage() <= endingRange)) {
+							carFound = true;
+							System.out.println(d.displayDetails());
+						}
+					}
+					if(carFound == false) {
+						System.out.println("No such car found.");
+					}
+					break;
+			
+			// Get details of the cheapest and most expensive car 
+			case 7: // base case
+					Detail cheapestCar = cars.get(0);
+					Detail mostExpensiveCar = cars.get(0);
+					// assignment operation
+					for(Detail currentCar : cars) {
+						if(currentCar.getPrice() < cheapestCar.getPrice()) {
+							cheapestCar = currentCar;
+						}
+						if(currentCar.getPrice() > mostExpensiveCar.getPrice()) {
+							mostExpensiveCar = currentCar; 
+						}
+					} 	
+					System.out.println("The cheapest car is :");
+					System.out.println(cheapestCar.displayDetails());
+					System.out.println("The most expensive car is :");
+					System.out.println(mostExpensiveCar.displayDetails());
+					break;
+			// Get available cars 
+			case 8: 
+					for(Detail currentCar : cars) {
+						if(currentCar.getSold() == 0) {
+							System.out.println(currentCar.displayDetails());
+						}
+					}
+					break;
+			
+			default: System.out.println("EXIT");
 		}
 
 	}
