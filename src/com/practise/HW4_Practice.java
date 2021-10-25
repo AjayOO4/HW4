@@ -37,12 +37,12 @@ public class HW4_Practice {
 
 						boolean carManu = false;
 						for(Detail d : cars) {
-							if(d.getManufacturer().contains(manu)){
+							if(d.getManufacturer().toLowerCase().contains(manu.toLowerCase())){
 								carManu = true;
 								System.out.println(d.displayDetails());
 							}
 						}
-						if(carManu){
+						if(carManu == false){
 							System.out.println("No car by " + manu + " found");
 						}
 						break;
@@ -59,7 +59,7 @@ public class HW4_Practice {
 								System.out.println(d.displayDetails());
 							}
 						}
-						if(flag) {
+						if(flag == false) {
 							System.out.println("No such Car Model found.");
 						}
 						break;
@@ -73,7 +73,7 @@ public class HW4_Practice {
 								System.out.println(d.displayDetails());
 							}
 						}
-						if(flag) {
+						if(flag == false) {
 							System.out.println("No Car with " + manu+ " Color found.");
 						}
 						break;		
@@ -130,17 +130,22 @@ public class HW4_Practice {
 						break;
 
 				// Get available cars 
-				case 8: for(Detail currentCar : cars) {
+				case 8: System.out.println("Currently Available for Sale");
+						userDeatilsTitle2();
+						for(Detail currentCar : cars) {
 							if(currentCar.getSold() == 0) {
-								System.out.println(currentCar.userDetails());
+								// System.out.println(currentCar.userDetails());
+								currentCar.userDetails3();
 							}
 						}
 						break;
 		
 				case 9: System.out.println("Following is the list of All Cars sold");
+						userDeatilsTitle2();
 						for(Detail currentCar : cars) {
 							if(currentCar.getSold() != 0) {
-								System.out.println(currentCar.userDetails());
+								// System.out.println(currentCar.userDetails());
+								currentCar.userDetails3();
 							}
 						}
 						break;
