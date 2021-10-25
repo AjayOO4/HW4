@@ -139,7 +139,7 @@ public class Detail {
 
     public void userDetails3(){        
         // return "| %10s" + manufacturer + "%10d | %10d" + model + "%10d | \t" + milage +  ", Owners = " + owners +  ", Title = " + title + ", Price = $" + price;
-        System.out.printf("| %10s \t| %10s", manufacturer, model);
+        System.out.printf("| \t%-16s| \t%-11s | \t%-8s |  %-5s |  %-8s |  %-5s \n", manufacturer, model,milage,owners,title,price);
     }
 
 }

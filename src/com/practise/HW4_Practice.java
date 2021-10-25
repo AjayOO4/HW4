@@ -24,10 +24,10 @@ public class HW4_Practice {
 		
 			switch(option) {		//Start of SWITCH case
 				case 1: //Displaying all of Inventory
-						// userDeatilsTitle2();
+						userDeatilsTitle2();
 						for(Detail d : cars) {
-							System.out.println(d.userDetails());
-							// d.userDetails3();
+							// System.out.println(d.userDetails());
+							d.userDetails3();
 						}
 						break;
 						
@@ -152,7 +152,7 @@ public class HW4_Practice {
 	}		//End of MAIN Method
 
 	public static void userDeatilsTitle2(){
-        System.out.println("| \tManufacturer\t | \tModel\t | \tMileage\t |");
+        System.out.println("|\tManufacturer\t|\tModel\t    |  Mileage \t | Owners |  Title    |  Price\n");
     }	//End of userDetailsTitle method
 
 }		//End of Program
