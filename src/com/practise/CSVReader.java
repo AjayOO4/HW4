@@ -30,7 +30,6 @@ public class CSVReader{
 			}		
 			
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch(IOException e) {
 			e.printStackTrace();
@@ -51,10 +50,7 @@ public class CSVReader{
 		 int dayslisted = Integer.parseInt(data[9]);
 		 int sold = Integer.parseInt(data[10]);
 
-
-
-
-	     // create and return book of this metadata
+	     // create and return car of this metadata
 	     return new Detail(manufacturer, model, price, milage, owners, color, title, mpg, hp, dayslisted, sold);
 	}
 	

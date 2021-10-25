@@ -30,9 +30,7 @@ public class Detail {
                 this.sold = sold;
     }
 
-
-    
-
+    //setters and getters for Manufacurer
     public String getManufacturer() {
         return manufacturer;
     }
@@ -41,6 +39,7 @@ public class Detail {
         this.manufacturer = manufacturer;
     }
 
+    //setters and getters for Price
     public int getPrice() {
         return price;
     }
@@ -49,6 +48,7 @@ public class Detail {
         this.price = price;
     }
 
+    //setters and getters for Car Model
     public void setModel(String model) {
         this.model = model;
     }
@@ -57,6 +57,7 @@ public class Detail {
         return model;
     }
 
+    //setters and getters for Title
     public void setTitle(String title) {
         this.title = title;
     }
@@ -65,6 +66,7 @@ public class Detail {
         return title;
     }
 
+    //setters and getters for mileage
     public void setMilage(int milage) {
         this.milage = milage;
     }
@@ -73,6 +75,7 @@ public class Detail {
         return milage;
     }
 
+    //setters and getters for number of owners of the car
     public void setOwners(int owners) {
         this.owners = owners;
     }
@@ -81,6 +84,7 @@ public class Detail {
         return owners;
     }
 
+    //setters and getters for Color
     public void setColor (String color) {
         this.color = color;
     }
@@ -89,6 +93,7 @@ public class Detail {
         return color;
     }
 
+    //setters and getters for Miles per-gallon
     public void setMPG(Float mpg) {
         this.mpg = mpg;
     }
@@ -97,6 +102,7 @@ public class Detail {
         return mpg;
     }
 
+    //setters and getters for Horse_Power of the Car
     public void setHP(int hp) {
         this.hp = hp;
     }
@@ -105,6 +111,7 @@ public class Detail {
         return hp;
     }
 
+    //setters and getters for the No.of days the Car is in the inventory
     public void setdayslisted(int dayslisted){
         this.dayslisted = dayslisted;
     }
@@ -113,6 +120,7 @@ public class Detail {
         return dayslisted;
     }
 
+    //setters and getters for sold cars
     public void setSold(int sold){
         this.sold = sold;
     }
@@ -121,10 +129,17 @@ public class Detail {
         return sold;
     }
 
-    
-    
     public String displayDetails() {
     	return "Manufacturer = " + manufacturer + ", Model = " + model + ", Price = $" + price + ", Milage = " + milage + ", Owners = " + owners + ", Color = " + color +", Title = " + title +", Mpg = " + mpg +", Horsepower = " + hp +", DaysListed = " + dayslisted +", Sold = " + sold +"\n";
+    }
+
+    public String userDetails(){
+        return "Manufacturer = " + manufacturer + ", Model = " + model + ", Milage = " + milage +  ", Owners = " + owners +  ", Title = " + title + ", Price = $" + price;
+    }
+
+    public void userDetails3(){        
+        // return "| %10s" + manufacturer + "%10d | %10d" + model + "%10d | \t" + milage +  ", Owners = " + owners +  ", Title = " + title + ", Price = $" + price;
+        System.out.printf("| %10s \t| %10s", manufacturer, model);
     }
 
 }
