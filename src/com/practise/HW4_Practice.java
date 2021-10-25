@@ -8,6 +8,7 @@ public class HW4_Practice {
 	public static void main(String[] args) throws Exception {
 		CSVReader reader = new CSVReader();
 		
+		System.out.println("engwkgh");
 //		String path = "/Practise Programs/src/com/practise/cars_data.csv";
 		List<Detail> cars = reader.readfromFile();
 		
