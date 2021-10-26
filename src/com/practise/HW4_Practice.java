@@ -6,7 +6,6 @@ import java.util.Scanner;
 import java.util.Queue;
 import java.util.Stack;
 
-import javax.lang.model.util.ElementScanner14;
 
 public class HW4_Practice {
 
@@ -156,6 +155,8 @@ public class HW4_Practice {
 							}
 						}
 						break;
+				//This is a queing system that manages car washes. You use the case-sensitive commands to run this section.
+				//There are checks to ensure the program doesn't crash because of queue underflow.
 				case 10: System.out.println("Use the queueing system to manage car washes.");
 						int carWashMode = 1;
 						while (carWashMode == 1) {
@@ -176,6 +177,8 @@ public class HW4_Practice {
 								case "EXIT" : carWashMode = 0; break;
 							}
 					}break;
+				//This is a queing system that manages car valet. You use the case-sensitive commands to run this section.
+				//There are checks to ensure the program doesn't crash because of stack underflow.
 				case 11: System.out.println("Use the stack system to manage valet.");
 						int valetMode = 1;
 						while (valetMode == 1) {
