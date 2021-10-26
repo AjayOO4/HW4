@@ -1,7 +1,12 @@
 package com.practise;
 
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Scanner;
+import java.util.Queue;
+import java.util.Stack;
+
+import javax.lang.model.util.ElementScanner14;
 
 public class HW4_Practice {
 
@@ -14,14 +19,16 @@ public class HW4_Practice {
 		int option;
 		String manu, model;
 		boolean flag;
-
+		Queue<String> carWashQueue = new PriorityQueue<>();
+		Stack<String> carValet = new Stack<>();
 		while(true){		//start of While loop
 			
 			System.out.println("Choose Options: ");
-			System.out.println("1. Display all Cars\n2. Search for a Particular Manufacturer Cars\n3. Search for a particular model \n4. Search for particular color \n5. Add a new Car \n6. Search by mileage range for the Car \n7. Get details by Highest and lowest price \n8. Get cars available for Sale\n9. Details of the Cars Sold\n10. Exit");
+			System.out.println("1. Display all Cars\n2. Search for a Particular Manufacturer Cars\n3. Search for a particular model \n4. Search for particular color \n5. Add a new Car \n6. Search by mileage range for the Car \n7. Get details by Highest and lowest price \n8. Get cars available for Sale\n9. Details of the Cars Sold\n10. Car Wash Management\n11. Valet Management \n12. Exit");
 
 			option  = sc.nextInt();
 		
+			
 			switch(option) {		//Start of SWITCH case
 				case 1: //Displaying all of Inventory
 						userDeatilsTitle2();
@@ -149,8 +156,49 @@ public class HW4_Practice {
 							}
 						}
 						break;
-				
-				case 10: System.exit(0); break;
+				case 10: System.out.println("Use the queueing system to manage car washes.");
+						int carWashMode = 1;
+						while (carWashMode == 1) {
+							System.out.println("Use the commands VIEW, ADD, REMOVE, or EXIT to leave carwash.");
+							String carWash = sc.next();
+							switch(carWash) {
+								case "VIEW":
+									if(carWashQueue.isEmpty()){
+									System.out.println("The carwash queue is currently empty."); break;
+									} else System.out.println(carWashQueue); break;
+								case "ADD" : System.out.println("What car would you like to add?"); carWash = sc.next(); carWashQueue.add(carWash); break;
+								case "REMOVE" :
+									if(carWashQueue.isEmpty()){
+									System.out.println("The carwash queue is currently empty."); break; }
+									else {
+									System.out.println("Marking " + carWashQueue.peek() + " as washed."); carWashQueue.remove(); break;
+									}
+								case "EXIT" : carWashMode = 0; break;
+							}
+					}break;
+				case 11: System.out.println("Use the stack system to manage valet.");
+						int valetMode = 1;
+						while (valetMode == 1) {
+							System.out.println("Use the commands VIEW, ADD, REMOVE, or EXIT to leave valet.");
+							String valet = sc.next();
+							switch(valet) {
+								case "VIEW": 
+									if(carValet.empty()){
+										System.out.println("The valet stack is currently empty."); break;
+									}
+									else System.out.println(carValet.peek()); break;
+								case "ADD" : System.out.println("What car would you like to add?"); valet = sc.next(); carValet.push(valet) ; break;
+								case "REMOVE" : 
+									if(carValet.empty()){
+										System.out.println("The valet stack is currently empty."); break;
+									}
+									else {
+										System.out.println("Marking " + carValet.peek() + " as removed."); carValet.pop(); break;
+									}
+								case "EXIT" : valetMode = 0; break;
+							}
+					}break;
+				case 12: System.exit(0); break;
 				default: System.exit(0);
 			}		//End of SWITCH
 		}		//End of WHILE
